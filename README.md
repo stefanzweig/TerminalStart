@@ -14,7 +14,7 @@ FireFox and Chrome start page a minimalist, terminal-inspired start page for you
 1. Clone the repository:
    ```bash
    git clone https://github.com/BRSkings/TerminalStart
-2. Run it localy throw any why of you want 
+2. Run it localy through any why of you want 
 
 ## Customization
 Edit the links object in the <script> section of bestone.html to add or modify commands.
