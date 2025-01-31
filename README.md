@@ -1,26 +1,16 @@
-Clone the Repository:
+# Terminal-Style Start Page
 
-Open your terminal or command prompt.
+A minimalist, terminal-inspired start page for your browser. This project provides a clean and customizable interface for quickly accessing your favorite websites and performing searches.
 
-Run the following command to clone the repository to your local machine:
+![Screenshot](screenshot.png) <!-- Add a screenshot if you have one -->
 
-bash
-Copy
-git clone https://github.com/your-username/terminal-start-page.git
-Replace your-username with your GitHub username.
+## Features
+- **Terminal Aesthetic**: Dark theme with monospaced font and command-line interface.
+- **Customizable Links**: Add your favorite websites and categorize them.
+- **Quick Search**: Type commands to navigate or search the web.
+- **Responsive Design**: Works on all screen sizes.
 
-Add Your Project Files:
-
-Copy your bestone.html file and any associated assets (e.g., the background image nice ONe.jpg) into the cloned repository folder.
-
-If you don’t have a README.md file, create one (see Step 3 for content).
-
-Commit and Push:
-
-Run the following commands to add, commit, and push your files to GitHub:
-
-bash
-Copy
-git add .
-git commit -m "Initial commit: Added terminal-style start page"
-git push origin main
+## Usage
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/terminal-start-page.git
