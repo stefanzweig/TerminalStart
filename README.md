@@ -13,7 +13,7 @@ FireFox and Chrome start page a minimalist, terminal-inspired start page for you
 ## Usage
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/te
+   git clone https://github.com/BRSkings/TerminalStart
 2. Run it localy throw any why of you want 
 
 ## Customization
