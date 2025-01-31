@@ -14,4 +14,3 @@ A minimalist, terminal-inspired start page for your browser. This project provid
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/te
-rminal-start-page.git
