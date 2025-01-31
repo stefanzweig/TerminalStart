@@ -33,5 +33,5 @@ search <query>: Performs a Google search.
 ## Technologies Used
 HTML, CSS, JavaScript
 
-## License
-This project is open-source and available under the MIT License.
+## inspiration
+I got inspiration from Excalith's start page: [https://excalith-start-page.vercel.app/](https://github.com/excalith/excalith-start-page)
