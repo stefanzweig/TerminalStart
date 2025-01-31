@@ -1,6 +1,6 @@
 # Terminal-Style Start Page
 
-A minimalist, terminal-inspired start page for your browser. This project provides a clean and customizable interface for quickly accessing your favorite websites and performing searches.
+FireFox and Chrome start page a minimalist, terminal-inspired start page for your browser. This project provides a clean and customizable interface for quickly accessing your favorite websites and performing searches.
 
 ![Screenshot](https://github.com/user-attachments/assets/75fc5fb7-4cd5-4160-ac78-fa2a1abbbe10)
 ## Features
