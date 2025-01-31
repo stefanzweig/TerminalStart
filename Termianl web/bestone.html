@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blurred Box with Input</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url('file:///C:/Users/BRS_kings/Documents/Test/quickWeb/nice%20ONe.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: "Fira Code", monospace;
+        }
+
+        .rounded-box {
+            width: 600px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.16); /* 16% opacity */
+            border-radius: 10px;
+            backdrop-filter: blur(16px);
+            box-shadow: 
+                0 0 5px rgba(0, 0, 0, 0.145),
+                0 0 25px rgba(0, 0, 0, 0.145),
+                0 0 50px rgba(0, 0, 0, 0.145),
+                0 0 200px rgba(0, 0, 0, 0.145);
+            color: #333; /* Darker text for better contrast */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding-bottom: 60px;
+        }
+
+        .subtext {
+            cursor: pointer;
+            transition: opacity 0.2s, color 0.2s;
+            color: white; /* Set text color to white */
+        }
+
+        .subtext:hover {
+            color: #90EE90; /* Light green on hover */
+        }
+
+        .subtext.dimmed {
+            opacity: 0.3; /* Dim non-matching items */
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            font-size: 14px;
+            font-family: "Fira Code", monospace;
+            letter-spacing: 2px;
+        }
+
+        .prompt {
+            margin-right: 5px;
+            letter-spacing: 2px;
+        }
+
+        .prompt .user {
+            color: #B62ED8;
+        }
+
+        .prompt .at {
+            color: #97989D;
+        }
+
+        .prompt .browser {
+            color: #AFF8B4;
+        }
+
+        .prompt .arrow {
+            color: #B62ED8;
+        }
+
+        .text-area {
+            flex-grow: 1;
+            background-color: transparent;
+            border: none;
+            color: white; /* Set input text color to white */
+            font-size: 14px;
+            font-family: "Fira Code", monospace;
+            outline: none;
+            caret-color: #B62ED8; /* Cursor color */
+            letter-spacing: 2px;
+        }
+
+        /* Updated category colors */
+        .category.general {
+            color: #2ED8A2;
+        }
+
+        .category.gaming {
+            color: #D1AFF8;
+        }
+
+        .category.dev {
+            color: #62E0E2;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const inputBox = document.querySelector(".text-area");
+            const clickableItems = document.querySelectorAll(".subtext");
+
+            const links = {
+                "📺 youtube": "https://www.youtube.com/", /* Updated to YouTube */
+                "📦 otto": "https://www.otto.de/",
+                "🤖 gpt": "https://chat.openai.com/",
+                "🐋 deepseek": "https://chat.deepseek.com/",
+                "🎮 steam": "https://store.steampowered.com/",
+                "🗑️ epic": "https://www.epicgames.com/store/",
+                "🕹️ roblox": "https://www.roblox.com/",
+                "🎭 itch.io": "https://itch.io/",
+                "🐙 github": "https://github.com/",
+                "🦊 gitlab": "https://gitlab.com/",
+                "📜 dev.to": "https://dev.to/",
+                "📚 stack overflow": "https://stackoverflow.com/"
+            };
+
+            // Function to filter items based on input
+            function filterItems(searchText) {
+                clickableItems.forEach(item => {
+                    const itemText = item.innerText.toLowerCase();
+                    if (itemText.includes(searchText.toLowerCase())) {
+                        item.classList.remove("dimmed"); // Highlight matching items
+                    } else {
+                        item.classList.add("dimmed"); // Dim non-matching items
+                    }
+                });
+            }
+
+            // Event listener for typing in the input box
+            inputBox.addEventListener("input", function () {
+                const inputText = inputBox.value.trim();
+                filterItems(inputText); // Filter items based on input
+            });
+
+            // Event listener for pressing Enter
+            inputBox.addEventListener("keypress", function (event) {
+                if (event.key === "Enter") {
+                    const inputText = inputBox.value.trim().toLowerCase();
+                    if (links[inputText]) {
+                        window.open(links[inputText], "_blank");
+                    } else {
+                        window.open(`https://www.google.com/search?q=${encodeURIComponent(inputText)}`, "_blank");
+                    }
+                    inputBox.value = "";
+                    filterItems(""); // Reset filter after search
+                }
+            });
+
+            // Event listener for clicking items
+            clickableItems.forEach(item => {
+                item.addEventListener("click", function () {
+                    const text = item.innerText.toLowerCase();
+                    if (links[text]) {
+                        window.open(links[text], "_blank");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="rounded-box">
+        <div class="content">
+            <div class="column">
+                <div class="category general">General</div>
+                <div class="subtext">📺 YouTube</div> <!-- Updated to YouTube -->
+                <div class="subtext">📦 Otto</div>
+                <div class="subtext">🤖 GPT</div>
+                <div class="subtext">🐋 DeepSeek</div>
+            </div>
+            <div class="column">
+                <div class="category gaming">Gaming</div>
+                <div class="subtext">🎮 Steam</div>
+                <div class="subtext">🗑️ Epic</div>
+                <div class="subtext">🕹️ Roblox</div>
+                <div class="subtext">🎭 Itch.io</div>
+            </div>
+            <div class="column">
+                <div class="category dev">Dev</div>
+                <div class="subtext">🐙 GitHub</div>
+                <div class="subtext">🦊 GitLab</div>
+                <div class="subtext">📜 Dev.to</div>
+                <div class="subtext">📚 Stack Overflow</div>
+            </div>
+        </div>
+        <div class="input-container">
+            <span class="prompt">
+                <span class="user">excalith</span><span class="at">@</span><span class="browser">browser</span> <span class="arrow">❯</span>
+            </span>
+            <input type="text" class="text-area" placeholder="command...">
+        </div>
+    </div>
+</body>
+</html>
