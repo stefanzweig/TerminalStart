@@ -15,3 +15,23 @@ FireFox and Chrome start page a minimalist, terminal-inspired start page for you
    ```bash
    git clone https://github.com/your-username/te
 2. Run it localy throw any why of you want 
+
+##Customization
+Edit the links object in the <script> section of bestone.html to add or modify commands.
+
+Replace the background image by updating the background URL in the CSS.
+
+##Example Commands
+📺 youtube: Opens YouTube.
+
+🎮 steam: Opens Steam.
+
+🐙 github: Opens GitHub.
+
+search <query>: Performs a Google search.
+
+##Technologies Used
+HTML, CSS, JavaScript
+
+##License
+This project is open-source and available under the MIT License.
