@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terminal</title>
     <style>
-       body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: url('https://raw.githubusercontent.com/BRSkings/TerminalStart/refs/heads/main/nice%20ONe.jpg') no-repeat center center fixed;
-    background-size: cover;
-    font-family: "Fira Code", monospace;
-}
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url('nice_one.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: "Fira Code", monospace;
+        }
 
         .rounded-box {
             width: 600px;
             padding: 30px;
-            background-color: rgba(255, 255, 255, 0.16); /* 16% opacity */
+            background-color: rgba(255, 255, 255, 0.16);
+            /* 16% opacity */
             border-radius: 10px;
             backdrop-filter: blur(16px);
-            box-shadow: 
+            box-shadow:
                 0 0 5px rgba(0, 0, 0, 0.145),
                 0 0 25px rgba(0, 0, 0, 0.145),
                 0 0 50px rgba(0, 0, 0, 0.145),
                 0 0 200px rgba(0, 0, 0, 0.145);
-            color: #333; /* Darker text for better contrast */
+            color: #333;
+            /* Darker text for better contrast */
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -45,15 +49,18 @@
         .subtext {
             cursor: pointer;
             transition: opacity 0.2s, color 0.2s;
-            color: white; /* Set text color to white */
+            color: white;
+            /* Set text color to white */
         }
 
         .subtext:hover {
-            color: #90EE90; /* Light green on hover */
+            color: #90EE90;
+            /* Light green on hover */
         }
 
         .subtext.dimmed {
-            opacity: 0.3; /* Dim non-matching items */
+            opacity: 0.3;
+            /* Dim non-matching items */
         }
 
         .input-container {
@@ -93,11 +100,13 @@
             flex-grow: 1;
             background-color: transparent;
             border: none;
-            color: white; /* Set input text color to white */
+            color: white;
+            /* Set input text color to white */
             font-size: 14px;
             font-family: "Fira Code", monospace;
             outline: none;
-            caret-color: #B62ED8; /* Cursor color */
+            caret-color: #B62ED8;
+            /* Cursor color */
             letter-spacing: 2px;
         }
 
@@ -178,6 +187,7 @@
         });
     </script>
 </head>
+
 <body>
     <div class="rounded-box">
         <div class="content">
@@ -205,10 +215,12 @@
         </div>
         <div class="input-container">
             <span class="prompt">
-                <span class="user">excalith</span><span class="at">@</span><span class="browser">browser</span> <span class="arrow">❯</span>
+                <span class="user">excalith</span><span class="at">@</span><span class="browser">browser</span> <span
+                    class="arrow">❯</span>
             </span>
             <input type="text" class="text-area" placeholder="command...">
         </div>
     </div>
 </body>
+
 </html>
