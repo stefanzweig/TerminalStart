@@ -44,7 +44,7 @@
 
         .content {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(6, 1fr);
             gap: 20px;
             padding-bottom: 60px;
         }
@@ -242,42 +242,65 @@
 <body>
     <div class="rounded-box">
         <div class="content">
+            <!-- Row 1: 日常 -->
             <div class="column">
-                <div class="category general">General</div>
+                <div class="category general">🔍 Search</div>
+                <div class="subtext">🐋 Google</div>
+                <div class="subtext">🐋 DeepSeek</div>
+            </div>
+            <div class="column">
+                <div class="category general">📺 Video</div>
                 <div class="subtext">📺 YouTube</div>
                 <div class="subtext">📺 BiliBili</div>
                 <div class="subtext">📺 Instagram</div>
-                <div class="subtext">🐋 DeepSeek</div>
-                <div class="subtext">🐋 Google</div>
+            </div>
+            <div class="column">
+                <div class="category general">📧 Mail</div>
                 <div class="subtext">🐋 Gmail</div>
                 <div class="subtext">🐋 QQ Mail</div>
             </div>
             <div class="column">
-                <div class="category gaming">Reading</div>
+                <div class="category gaming">📜 Reading</div>
                 <div class="subtext">📜 Instapaper</div>
                 <div class="subtext">📜 My Instppr</div>
-                <div class="subtext">📜 Paul Graham</div>
                 <div class="subtext">📜 Feedly</div>
                 <div class="subtext">📜 Kmoe</div>
-                <div class="subtext">📜 Ruan Yifeng</div>
             </div>
             <div class="column">
-                <div class="category dev">Dev</div>
+                <div class="category gaming">✍️ Bloggers</div>
+                <div class="subtext">📜 Paul Graham</div>
+                <div class="subtext">📜 Ruan Yifeng</div>
+                <div class="subtext">📜 Simon Willison</div>
+            </div>
+            <div class="column">
+                <div class="category dev">🍩 Social</div>
+                <div class="subtext">🍩 Mastodon</div>
+                <div class="subtext">🍩 Telegram</div>
+                <div class="subtext">🍩 Twitter</div>
+                <div class="subtext">🍩 Facebook</div>
+                <div class="subtext">🍩 BlueSky</div>
+                <div class="subtext">🍩 FanFou</div>
+                <div class="subtext">🍩 NoFan</div>
+                <div class="subtext">🍩 Zhihu</div>
+            </div>
+
+            <!-- Row 2: 开发 -->
+            <div class="column">
+                <div class="category dev">🍦 Dev</div>
                 <div class="subtext">🍦 GitHub</div>
-                <!-- <div class="subtext">🍦 BitBucket</div> -->
                 <div class="subtext">🍦 Emacs</div>
                 <div class="subtext">🍦 Vercel</div>
                 <div class="subtext">🍦 Cloudflare</div>
             </div>
             <div class="column">
-                <div class="category dev">AI Platform</div>
+                <div class="category dev">🤖 AI Platform</div>
                 <div class="subtext">🤖 MiniMax</div>
                 <div class="subtext">🤖 Bailian</div>
                 <div class="subtext">🤖 DeepSeek Platform</div>
                 <div class="subtext">🤖 Volcengine</div>
             </div>
             <div class="column">
-                <div class="category dev">Python</div>
+                <div class="category dev">🐍 Python</div>
                 <div class="subtext">🤖 Django</div>
                 <div class="subtext">🤖 DRF</div>
                 <div class="subtext">🤖 Fastapi</div>
@@ -285,7 +308,7 @@
                 <div class="subtext">🤖 Webpy</div>
             </div>
             <div class="column">
-                <div class="category dev">Development</div>
+                <div class="category dev">🚀 Development</div>
                 <div class="subtext">🚀 Lazarus</div>
                 <div class="subtext">🚀 Trello</div>
                 <div class="subtext">🚀 CPP Shell</div>
@@ -294,20 +317,13 @@
                 <div class="subtext">🚀 Raylib</div>
             </div>
             <div class="column">
-                <div class="category dev">Social Networks</div>
-                <div class="subtext">🍩 Mastodon</div>
-                <div class="subtext">🍩 Telegram</div>
-                <div class="subtext">🍩 Twitter</div>
-                <div class="subtext">🍩 Facebook</div>
-                <div class="subtext">🍩 FanFou</div>
-                <div class="subtext">🍩 NoFan</div>
-                <div class="subtext">🍩 BlueSky</div>
-                <div class="subtext">🍩 Zhihu</div>
+                <div class="category general">📊 Data</div>
+                <div class="subtext">📚 Datasette</div>
+                <div class="subtext">📚 LLM</div>
             </div>
             <div class="column">
-                <div class="category general">Tools</div>
+                <div class="category general">🛠️ Tools</div>
                 <div class="subtext">📚 Journal</div>
-                <div class="subtext">📚 Memos</div>
                 <div class="subtext">📚 TextArea</div>
                 <div class="subtext">📚 Shout</div>
                 <div class="subtext">📚 Instapaper Add</div>
@@ -316,18 +332,24 @@
                 <div class="subtext">📰 FreshRSS</div>
                 <div class="subtext">📰 Buzzing</div>
             </div>
+
+            <!-- Row 3: 服务 -->
             <div class="column">
-                <div class="category general">XYZ</div>
-                <div class="subtext">🔤 Big Words</div>
-                <div class="subtext">🎮 Baduk</div>
+                <div class="category general">📚 Memos</div>
+                <div class="subtext">📚 Memos</div>
+            </div>
+            <div class="column">
+                <div class="category general">📚 Glance</div>
                 <div class="subtext">📚 Glance</div>
+            </div>
+            <div class="column">
+                <div class="category general">🦞 De-Claw</div>
                 <div class="subtext">🦞 De-Claw</div>
             </div>
             <div class="column">
-                <div class="category general">Data</div>
-                <div class="subtext">📜 Simon Willison</div>
-                <div class="subtext">📚 Datasette</div>
-                <div class="subtext">📚 LLM
+                <div class="category general">🎮 Fun</div>
+                <div class="subtext">🔤 Big Words</div>
+                <div class="subtext">🎮 Baduk</div>
             </div>
         </div>
         <div class="input-container">
